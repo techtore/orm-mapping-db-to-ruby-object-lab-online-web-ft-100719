@@ -59,7 +59,12 @@ end
   end
   
   def self.all 
+    sql = <<-SQL
+      SELECT * 
+      FROM students
+    SQL
     
+    DB[:conn].execute(sql)
   end
   
   def save
