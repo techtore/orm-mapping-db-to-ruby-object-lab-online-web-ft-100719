@@ -11,7 +11,7 @@ end
 
   def self.all
     sql = <<-SQL
-    SELECT * # retrieve all the rows from the "Students" database
+    SELECT *
     FROM students 
     SQL
     
@@ -56,15 +56,6 @@ end
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row) 
     end
-  end
-  
-  def self.all 
-    sql = <<-SQL
-      SELECT * 
-      FROM students
-    SQL
-    
-    DB[:conn].execute(sql)
   end
   
   def save
