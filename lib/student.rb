@@ -71,7 +71,7 @@ end
    end
   end
   
-    def self.first_student_in_grade_10
+  def self.first_student_in_grade_10
    sql = <<-SQL
       SELECT *
       FROM students 
@@ -79,9 +79,13 @@ end
       LIMIT 1
     SQL
    
-   DB[:conn].execute(sql).map do |row|
+    DB[:conn].execute(sql).map do |row|
      self.new_from_db(row)
-   end.first
+    end.first
+  end
+  
+  def self.all_students_in_grade_x 
+    
   end
   
   def save
