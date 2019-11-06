@@ -59,7 +59,7 @@ end
   end
   
   def self.all 
-    self.all
+    
   end
   
   def save
