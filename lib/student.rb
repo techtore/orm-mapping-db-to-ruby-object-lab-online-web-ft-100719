@@ -66,9 +66,7 @@ end
       LIMIT ?
      SQL
     
-    end
-    
-    DB[:conn].execute(sql, num)
+     DB[:conn].execute(sql, num)
   
   end
   
