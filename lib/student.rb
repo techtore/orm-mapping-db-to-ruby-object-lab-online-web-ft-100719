@@ -63,7 +63,7 @@ end
       SELECT * 
       FROM students 
       WHERE grade = "10"
-      LIMIT "?"
+      LIMIT ?
      SQL
     
      DB[:conn].execute(sql,x)
